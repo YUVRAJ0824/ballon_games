@@ -1,64 +1,37 @@
-# Balloon Pop: Android-Based Mini-Game Collection
+# Balloon Pop: Android Mini-Game Collection
 
-![Java](https://img.shields.io/badge/Java-17%2B-orange?style=for-the-badge&logo=java)
-![Platform](https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android)
-![Architecture](https://img.shields.io/badge/Architecture-Event--Driven-blue?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+A native Android arcade application featuring 2D physics simulation, multi-touch collision handling, and multiple mini-game modes. Built with Java and the Android SDK using SurfaceView and custom game threads for 60 FPS rendering.
 
-An interactive, multi-threaded mobile arcade application combining 3–4 high-reflex mini-games built natively in Java for Android. Features real-time touch coordinate collision handling, optimized object pooling for zero-lag rendering, dynamic difficulty scaling, and persistent high-score leaderboards.
+## Game Modes
 
----
+- Classic Mode: Balloons ascend at variable speeds and point values. The objective is to pop them before they exit the top boundary.
+- Hazard Mode: Bomb obstacles spawn among standard balloons. Touching a bomb results in penalties or game over.
+- Time Attack Mode: Fixed 60-second round testing rapid touch accuracy with combo multipliers.
+- Sensor Mode: Uses hardware accelerometer data to influence balloon drift and trajectory.
 
-## 🎮 Game Modes & Features
+## Technical Architecture
 
-- **🎈 Classic Balloon Pop:** Rapid reflex game with ascending balloons of varying speeds, point values, and sizes.
-- **💣 Hazard & Bomb Avoidance:** Dynamic bomb spawns that penalize score or trigger instant game over upon accidental tap.
-- **⏱️ Time Rush Challenge:** 60-second frenzy mode testing multi-finger tapping speed with multiplier combos.
-- **🎨 Special Balloon Variations:**
-  - *Golden Balloon:* High-point reward bonus.
-  - *Freeze Balloon:* Temporarily slows down all balloon ascent velocities.
-  - *Rainbow Burst:* Pops all adjacent balloons in an explosion radius.
-- **🏆 Persistent Leaderboard:** Local SQLite / SharedPreferences storage saving top scores, accuracy, and play streaks.
+- Rendering Engine: Multi-threaded game loop running on a dedicated worker thread via SurfaceView.
+- Collision Detection: Euclidean distance calculation per touch event.
+- State Management: Activity lifecycle handling with pause/resume synchronization.
+- Persistence: SharedPreferences and SQLite for local high scores.
 
----
+## Tech Stack
 
-## 🏗️ Technical Architecture & Design Highlights
+- Language: Java 17+
+- Platform: Android SDK (minSdkVersion 24, targetSdkVersion 34)
+- Tooling: Android Studio, Gradle
 
-- **Object Pooling Pattern:** Recycles balloon objects to prevent excessive memory allocation and avoid Android Garbage Collection (GC) frame stutters.
-- **Multi-Threaded Game Loop:** Dedicated rendering and physics updates running on a separate thread from the Android Main/UI thread to maintain steady 60 FPS.
-- **Event-Driven Touch Dispatching:** Custom view coordinate calculation with multi-touch support for fast consecutive taps.
-- **Sound & Haptics:** Low-latency SoundPool audio playback and dynamic vibrational haptic feedback.
+## Project Structure
 
----
+- app/src/main/java/ - Core game loop, surface views, and entity models
+- app/src/main/res/ - XML layouts, strings, and drawables
+- app/build.gradle - Build configuration and SDK dependencies
 
-## 🛠️ Technology Stack
+## Setup
 
-| Layer | Technology |
-| :--- | :--- |
-| **Language** | Java 17+ |
-| **Platform** | Android SDK (API Level 26–34) |
-| **IDE** | Android Studio |
-| **Audio** | Android SoundPool API (Low-latency audio) |
-| **Storage** | SQLite / SharedPreferences |
-| **UI & Layouts** | Native Android XML Layouts & Custom Canvas Views |
-
----
-
-## 🚀 Setup & Installation
-
-1. **Clone the repository:**
-   `ash
+1. Clone the repository:
    git clone https://github.com/YUVRAJ0824/ballon_games.git
-   cd ballon_games
-   `
-2. **Open in Android Studio:**
-   - Select **File > Open** and choose the project directory.
-   - Allow Gradle to sync dependencies.
-3. **Run on Device or Emulator:**
-   - Select your target Android device (API 26+) and click **Run (Shift + F10)**.
-
----
-
-## 📜 Academic Project Details
-- **Course:** Master of Computer Applications (MCA) — Final Year
-- **Project Title:** Balloon Pop: Android-Based Mini-Game Collection
+2. Open the project in Android Studio.
+3. Sync Gradle dependencies.
+4. Run on an Android device or emulator running API 24+.
