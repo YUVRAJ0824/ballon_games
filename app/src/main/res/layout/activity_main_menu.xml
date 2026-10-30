@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/menu_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_title"
+        android:textColor="@color/title_text"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:shadowColor="#55000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/menu_subtitle"
+        android:textColor="#DDFFFFFF"
+        android:textSize="18sp" />
+
+    <!-- High Score -->
+    <TextView
+        android:id="@+id/tvHighScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="High Score: 0"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="italic" />
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Game 1: Classic Pop (Active) -->
+    <Button
+        android:id="@+id/btnClassicPop"
+        style="@style/GameButton"
+        android:backgroundTint="@color/btn_play"
+        android:text="@string/btn_classic_pop"
+        android:textColor="@color/btn_play_text" />
+
+    <!-- Game 2: Bomb Dodge (Locked) -->
+    <Button
+        android:id="@+id/btnBombDodge"
+        style="@style/GameButton"
+        android:backgroundTint="@color/btn_locked"
+        android:text="@string/btn_bomb_dodge"
+        android:textColor="@color/btn_locked_text"
+        android:enabled="false" />
+
+    <!-- Game 3: Time Attack (Locked) -->
+    <Button
+        android:id="@+id/btnTimeAttack"
+        style="@style/GameButton"
+        android:backgroundTint="@color/btn_locked"
+        android:text="@string/btn_time_attack"
+        android:textColor="@color/btn_locked_text"
+        android:enabled="false" />
+
+    <!-- Game 4: Tilt & Pop (Locked) -->
+    <Button
+        android:id="@+id/btnTiltPop"
+        style="@style/GameButton"
+        android:backgroundTint="@color/btn_locked"
+        android:text="@string/btn_tilt_pop"
+        android:textColor="@color/btn_locked_text"
+        android:enabled="false" />
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="2" />
+
+</LinearLayout>

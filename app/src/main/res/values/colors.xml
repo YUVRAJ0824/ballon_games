@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sky_top">#4FC3F7</color>
+    <color name="sky_bottom">#E1F5FE</color>
+    <color name="menu_bg">#FF87CEEB</color>
+    <color name="btn_play">#FF4CAF50</color>
+    <color name="btn_play_text">#FFFFFFFF</color>
+    <color name="btn_locked">#FFBDBDBD</color>
+    <color name="btn_locked_text">#FF757575</color>
+    <color name="score_text">#FFFFFFFF</color>
+    <color name="title_text">#FFFFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+</resources>

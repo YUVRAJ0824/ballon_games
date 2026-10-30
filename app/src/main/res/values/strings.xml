@@ -1,8 +1,26 @@
 <resources>
-    <string name="app_name">Bouncing Balls</string>
-    <string name="first_run_text">- Touch the screen to create a ball\n- Touch a ball to remove it\n- Drag your finger to make big balls\n- Turn your device and watch them bounce!</string>
-    <string name="first_run_title">How to Play</string>
-    <string name="first_run_confirm">OK</string>
-    <string name="count_balls">balls</string>
-    <string name="clear">clear</string>
+    <string name="app_name">Balloon Pop</string>
+
+    <!-- Main Menu -->
+    <string name="menu_title">🎈 Balloon Pop</string>
+    <string name="menu_subtitle">Mini-Game Collection</string>
+    <string name="btn_classic_pop">Classic Pop</string>
+    <string name="btn_bomb_dodge">Bomb Dodge 🔒</string>
+    <string name="btn_time_attack">Time Attack 🔒</string>
+    <string name="btn_tilt_pop">Tilt &amp; Pop 🔒</string>
+    <string name="high_score_label">High Score: %d</string>
+
+    <!-- Game -->
+    <string name="score_label">Score: %d</string>
+    <string name="lives_label">❤️ x%d</string>
+    <string name="level_label">Level %d</string>
+    <string name="paused">PAUSED</string>
+    <string name="tap_to_resume">Tap to resume</string>
+
+    <!-- Game Over -->
+    <string name="game_over">Game Over!</string>
+    <string name="final_score">Score: %d</string>
+    <string name="new_high_score">🏆 NEW HIGH SCORE!</string>
+    <string name="btn_play_again">Play Again</string>
+    <string name="btn_main_menu">Main Menu</string>
 </resources>
